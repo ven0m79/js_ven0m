@@ -27,6 +27,7 @@ function convert(result) {
   }
   
   
+  
   let cloth = createCloth('Джинсы','M','red' )
   
   
