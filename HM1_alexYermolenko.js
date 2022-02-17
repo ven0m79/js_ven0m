@@ -5,48 +5,32 @@ const met = 90.2345;
 const max = Math.max(kodein, morphin, met);
 const min = Math.min(kodein, morphin, met);
 const summ = (kodein + morphin + met);
-let summLow = Math.floor(kodein) + Math.floor(morphin) + Math.floor(met);
-let summHundred = Math.round(summLow/100)*100;
-let keepChange = 500 - summ;
+const summLow = Math.floor(kodein) + Math.floor(morphin) + Math.floor(met);
+const summHundred = Math.round(summLow/100)*100;
+const keepChange = 500 - summ;
+const odd = Math.floor(summ)%2 == 0;;
+const middlePrice2 = (kodein + morphin + met)/3;
+const middlePrice1 = middlePrice2.toFixed(2);
+const middlePrice = Number(middlePrice1);
+const discount = Math.random()*(50);
+const clientPaid1 = (summ - discount).toFixed(2);
+const clientPaid = Number(clientPaid1);
+const profit = summ / 2 - discount;
 
 
-
-if (Math.floor(summ)%2 == 0) {
-    console.log('Сума товарів є парним числом так як вона дорівнює - ' + Math.floor(summ))
-} else console.log('Сума товарів є непарним числом так як вона дорівнює - ' + Math.floor(summ))
-
-
-let odd;
-odd = Math.floor(summ)%2 == 0;
-console.log('Сума парна? - ' + odd);
-
- 
-console.log('Решту з 500 отримає ' + keepChange);
-
-let middlePrice;
-middlePrice = (kodein + morphin + met)/3;
-console.log('Середнє значення цін, округлене до другого знаку після коми - ' + middlePrice.toFixed(2));
-
-
-let discount;
-let halfPrice;
-discount = Math.random()*(50);
-console.log('Випадкова знижка - ' + discount);
-console.log('Ваша знижка ' + discount + '. ' + 'Сума до сплати - ' + (summ - discount).toFixed(2));
-
-halfPrice = summ/2;
-profit = halfPrice - discount;
-console.log('Пів ціни - ' + halfPrice);
-console.log('Чистий прибуток складає - ' + profit);
-
-
-console.log('Сума товарів округлена до сотен = ' + summHundred);
-console.log('Сума товарів без копійок = ' + summLow);
-
-
-console.log('Сума товарів = ' + summ);
-console.log('Найдешевший товар коштує - ' + min);
-console.log('Найдорожчий товар коштує - ' + max);
-
+const homeworkResults = {
+    'Найдорожчий товар коштує': max,
+    'Найдешевший товар коштує': min,
+    'Вартість всіх товарів': summ,
+    'Вартість товарів без копійок. Округлення в МЕНЬШУ сторону': summLow,
+    'Cума товарів, округлена до сотень': summHundred,
+    'Булеве значення: чи є сума всіх товарів парним числом?': odd,
+    'Cума решти при оплаті всіх товарів, якщо клієнт платить 500': keepChange,
+    'Середнє значення цін, округлене до другого знаку після коми':  middlePrice,
+    'Випадкова знижка': discount,
+    'Сума до сплати зі знижкою': clientPaid,
+    'Чистий прибуток': profit
+ }
 
 console.log('Кодеин коштує - ' + kodein + ', Морфин коштує - ' + morphin + ', Метамфитамин коштує - ' + met);
+console.table(homeworkResults)
