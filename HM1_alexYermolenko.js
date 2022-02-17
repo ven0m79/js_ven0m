@@ -17,7 +17,6 @@ const clientPaid1 = (summ - discount).toFixed(2);
 const clientPaid = Number(clientPaid1);
 const profit = summ / 2 - discount;
 
-
 const homeworkResults = {
     'Найдорожчий товар коштує': max,
     'Найдешевший товар коштує': min,
@@ -31,6 +30,5 @@ const homeworkResults = {
     'Сума до сплати зі знижкою': clientPaid,
     'Чистий прибуток': profit
  }
-
 console.log('Кодеин коштує - ' + kodein + ', Морфин коштує - ' + morphin + ', Метамфитамин коштує - ' + met);
 console.table(homeworkResults)
