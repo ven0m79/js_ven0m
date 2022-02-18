@@ -30,5 +30,5 @@ const homeworkResults = {
     'Сума до сплати зі знижкою': clientPaid,
     'Чистий прибуток': profit
  }
-console.log('Кодеин коштує - ' + kodein + ', Морфин коштує - ' + morphin + ', Метамфитамин коштує - ' + met);
+console.log('Кодеин коштує - ' + kodein + ', Морфин коштує - ' + morphin + ', Метамфетамин коштує - ' + met);
 console.table(homeworkResults)
