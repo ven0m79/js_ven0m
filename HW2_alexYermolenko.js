@@ -1,4 +1,6 @@
 let n, m;
 let a, b;
-a = prompt(N);
-b = prompt(M);
+a = prompt(n);
+b = prompt(m);
+console.log(a);
+console.log(b);
