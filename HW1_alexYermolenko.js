@@ -5,16 +5,13 @@ const met = 90.2345;
 const max = Math.max(kodein, morphin, met);
 const min = Math.min(kodein, morphin, met);
 const summ = (kodein + morphin + met);
-const summLow = Math.floor(kodein) + Math.floor(morphin) + Math.floor(met);
+const summLow = Math.floor(kodein + morphin + met);
 const summHundred = Math.round(summLow/100)*100;
 const keepChange = 500 - summ;
 const odd = Math.floor(summ)%2 == 0;
-const middlePrice2 = (kodein + morphin + met)/3;
-const middlePrice1 = middlePrice2.toFixed(2);
-const middlePrice = Number(middlePrice1);
+const middlePrice = +(((kodein + morphin + met)/3).toFixed(2));
 const discount = Math.round(Math.random()*(100));
-const clientPaid1 = (summ - (summ * discount/100)).toFixed(2);
-const clientPaid = Number(clientPaid1);
+const clientPaid = +((summ - (summ * discount/100)).toFixed(2));
 const profit = summ / 2 - (summ * discount/100);
 
 const homeworkResults = {
