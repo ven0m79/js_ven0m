@@ -12,7 +12,7 @@ const odd = Math.floor(summ)%2 == 0;
 const middlePrice2 = (kodein + morphin + met)/3;
 const middlePrice1 = middlePrice2.toFixed(2);
 const middlePrice = Number(middlePrice1);
-const discount = Math.round(Math.random()*(50));
+const discount = Math.round(Math.random()*(100));
 const clientPaid1 = (summ - (summ * discount/100)).toFixed(2);
 const clientPaid = Number(clientPaid1);
 const profit = summ / 2 - (summ * discount/100);
