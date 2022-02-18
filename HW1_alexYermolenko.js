@@ -15,7 +15,7 @@ const middlePrice = Number(middlePrice1);
 const discount = Math.round(Math.random()*(50));
 const clientPaid1 = (summ - (summ * discount/100)).toFixed(2);
 const clientPaid = Number(clientPaid1);
-const profit = summ / 2 - discount;
+const profit = summ / 2 - (summ * discount/100);
 
 const homeworkResults = {
     'Найдорожчий товар коштує': max,
