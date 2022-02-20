@@ -1,21 +1,37 @@
 let n, m;
-let sum;
+let sum = 0;
 
 do {
- n = +(prompt('Введіть ціле число N', 10));
+ n = +prompt('Введіть ціле число N', 10);
 }
 while (!Number.isInteger(n));
 console.log(n);
 
 do {
-    m = +(prompt('Введіть ціле число M (повинно бути більше N)', 20));
-   }
+    m = +(prompt('Введіть ціле число M (повинно бути більше N)', 100));
+}
    while (!Number.isInteger(m) || m <= n);
 console.log(m);
 
-if (confirm('Пропускати парні числа?')) {
-sum = n +
+if (even = confirm('Пропускати парні числа?')) {
+    for (let i = n; i < m; i++) {
+        if (i % 2 == 0){
+            i++;
+            sum = sum + i;
+            console.log('i = ' + i);
+            console.log('Сумма чисед від N до М дорівнює: ' + sum)
+        } else  sum = i;
+    }
+} else
+    for (let i = n; i <= m; i++) {
+        console.log('i = ' + i);
+        sum = sum + i;
+        console.log('Сумма чисед від N до М дорівнює: ' + sum)
+    }
+console.log('Сума чисел буде дорівнювати - ' + sum);
 
-
-};
-//n % 2 == 0;
+document.writeln(
+    `<p>Ви ввели N: ${n}</p>
+     <p>Ви ввели M: ${m}</p>
+     <p>Пропускати парні: ${even}</p>
+     <p>Сумма чисед від N до М дорівнює: ${sum}</p>`);
