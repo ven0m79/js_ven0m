@@ -4,13 +4,13 @@ let sum = 0;
 do {
  n = +prompt('Введіть ціле число N', 10);
 }
-while (!Number.isInteger(n));
+while (!Number.isInteger(n) || !n);
 console.log(n);
 
 do {
-    m = +(prompt('Введіть ціле число M (повинно бути більше N)', 100));
+    m = +prompt('Введіть ціле число M (повинно бути більше N)', 100);
 }
-   while (!Number.isInteger(m) || m <= n);
+   while (!Number.isInteger(m) || m <= n || !n);
 console.log(m);
 
 if (even = confirm('Пропускати парні числа?')) {
