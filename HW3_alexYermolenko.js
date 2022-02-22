@@ -1,18 +1,19 @@
 // Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі.
 // Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
-//  function getMaxDigit(fullNumb) {
-//     let digit;
-//     let k = fullNumb.length;
-//      console.log(fullNumb.length);
-//     for (i =0; i <= k; i++) {
-//         console.log(i)
-//
-//     }
-//     digit = i;
-// return digit;
-// }
-// getMaxDigit(685234);
-// console.log(digit);
+  function getMaxDigit(fullNumb) {
+    let str = fullNumb.toString();
+    let k = fullNumb.toString().length;
+    let maxDigit = 0;
+     for (i =0; i < k; i++) {
+         if (maxDigit < +str[i]){
+            maxDigit = +str[i];
+         }
+     }
+    maxDigitResult = maxDigit;
+    return maxDigitResult;
+ }
+getMaxDigit(34565);
+console.log(maxDigitResult);
 
 // Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 function inPow(number, pow) {
@@ -50,10 +51,28 @@ console.log(sumFixTaxes);
 
 // Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.
 // Приклад: getRandomNumber(1, 10) -> 5
+function getRandomNumber(numberN, numberM) {
+    return n = parseInt(Math.random() * (numberM - numberN) + numberN);
+}
+getRandomNumber(1, 10);
+console.log(n)
 
 // Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 // Приклад: countLetter("а", "Асталавіста") -> 4
+function countLetter(letter, word) {
+    let counter = 0;
+    let l = word.length;
+    for (i = 0; i < l; i++) {
+        if (word[i] == letter) {
+            counter++;
+            }
+        x = counter;
+    }
 
+    return x;
+}
+countLetter('и', 'вилисипидисти');
+console.log(x)
 // Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку.
 // Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$
 // Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.
