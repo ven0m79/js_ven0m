@@ -25,8 +25,7 @@ function formatName(name) {
     let i, j;
     i = name[0].toUpperCase();
     j = name.slice(1).toLowerCase();
-    reName = i + j;
-    return reName;
+    return reName = i + j;
 }
 
 // Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
