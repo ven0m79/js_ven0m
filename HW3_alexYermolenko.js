@@ -22,18 +22,14 @@ function inPow(number, pow) {
 
 // Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
 function formatName(name) {
-    let i, j;
-    i = name[0].toUpperCase();
-    j = name.slice(1).toLowerCase();
-    return reName = i + j;
+    return reName = name[0].toUpperCase() + name.slice(1).toLowerCase();
 }
 
 // Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 function payTaxes(sum) {
     let taxes = 18;
     let militaryTaxes = 1.5;
-    sumFixTaxes = sum - (sum * (taxes + militaryTaxes)/100);
-    return sumFixTaxes;
+    return sumFixTaxes = sum - (sum * (taxes + militaryTaxes)/100);
 }
 
 // Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
