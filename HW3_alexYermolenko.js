@@ -1,5 +1,4 @@
-// Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі.
-// Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
+// Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
   function getMaxDigit(fullNumb) {
     let str = fullNumb.toString();
     let k = fullNumb.toString().length;
@@ -30,8 +29,7 @@ function formatName(name) {
     return reName;
 }
 
-// Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%).
-// Приклад: 1000 -> 805
+// Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 function payTaxes(sum) {
     let taxes = 18;
     let militaryTaxes = 1.5;
@@ -39,14 +37,12 @@ function payTaxes(sum) {
     return sumFixTaxes;
 }
 
-// Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.
-// Приклад: getRandomNumber(1, 10) -> 5
+// Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
 function getRandomNumber(numberN, numberM) {
     return n = parseInt(Math.random() * (numberM - numberN) + numberN);
 }
 
-// Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
-// Приклад: countLetter("а", "Асталавіста") -> 4
+// Створити функцію, яка рахує скільки разів певна буква повторюється в слові. Приклад: countLetter("а", "Асталавіста") -> 4
 function countLetter(letter, word) {
     let counter = 0;
     let l = word.length;
@@ -76,16 +72,14 @@ function convertCurrency(money) {
     console.log(uahCurrency)
 }
 
-// Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
-// Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
+// Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам. Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 function getRandomPassword(numberOfDigits=4) {
     let maxX = Math.pow(10, +numberOfDigits);
     let minX = Math.pow(10, +numberOfDigits-1);
     return nDigits = parseInt(Math.random() * (maxX - minX)) + minX;
 }
 
-// Створіть функцію, яка видаляє всі букви з речення.
-// Приклад: deleteLetters('a', "blablabla") -> "blblbl"
+// Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 function deleteLetter(letter, word) {
     let l = word.length;
     let newWord ='';
@@ -108,17 +102,11 @@ document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №3: ${formatName('ІхТіаНдР')}</br>
                     Функція №4: ${payTaxes(1000)}</br>
                     Функція №5: ${getRandomNumber(1, 10)}</br>
-                    Функція №6: ${countLetter('и', 'вилисипидисти налисопидили')}</br>
+                    Функція №6: ${countLetter('и', 'вилисипидисти налисипидили')}</br>
                     Функція №7: In progress....</br>
                     Функція №8: ${getRandomPassword(15)}</br>
                     Функція №9: ${deleteLetter('и', 'вилисипидисти')}</br>
                     Функція №10: In progress....</br>
                     Функція №11: In progress....</br>
-                    
-</p>
-             
-
-
-
-                                    `)
+</p>`)
 
