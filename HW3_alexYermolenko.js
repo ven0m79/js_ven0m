@@ -68,7 +68,7 @@ function convertCurrency(money) {
 }
 
 // Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам. Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
-function getRandomPassword(numberOfDigits=4) {
+function getRandomPassword(numberOfDigits=8) {
     let maxX = Math.pow(10, +numberOfDigits);
     let minX = Math.pow(10, +numberOfDigits-1);
     return nDigits = parseInt(Math.random() * (maxX - minX)) + minX;
@@ -88,6 +88,24 @@ function deleteLetter(letter, word) {
 
 // Створіть функцію, яка перевіряє, чи є слово паліндромом.
 // Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
+function isPalyndrom(word) {
+    let newWord = '';
+    let middleWord = '';
+    for (i = 0; i <= word.length - 1; i++){
+        if (word[i] == ' ') {i++}
+    middleWord = middleWord + word[i].toLowerCase();
+    console.log(middleWord)
+    }
+    for (i = word.length - 1; i >= 0; i--) {
+        if (word[i] == ' ') {i--}
+        newWord = newWord + word[i].toLowerCase();
+        console.log(newWord)
+    }
+    word = middleWord;
+    if (word == newWord) {
+        return true
+    } else return false
+}
 
 // Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу.
 // Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
@@ -99,9 +117,9 @@ document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №5: ${getRandomNumber(1, 10)}</br>
                     Функція №6: ${countLetter('и', 'вилисипидисти налисипидили')}</br>
                     Функція №7: In progress....</br>
-                    Функція №8: ${getRandomPassword(15)}</br>
+                    Функція №8: ${getRandomPassword()}</br>
                     Функція №9: ${deleteLetter('и', 'вилисипидисти')}</br>
-                    Функція №10: In progress....</br>
+                    Функція №10: ${isPalyndrom('Я несу гусеня')}</br>
                     Функція №11: In progress....</br>
 </p>`)
-
+// Функція №10: ${isPalyndrom('сокос')}</br>

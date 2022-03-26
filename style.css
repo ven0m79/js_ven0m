@@ -1,10 +1,13 @@
+body {
+    background-color: #9e9d9d;
+}
 p {
     padding-left: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-    color: blue;
+    color: #00003f;
 }
-.a {color: red;
+.a {color: #970000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     margin-left: 30px;
