@@ -94,12 +94,12 @@ function isPalyndrom(word) {
     for (i = 0; i <= word.length - 1; i++){
         if (word[i] == ' ') {i++}
     middleWord = middleWord + word[i].toLowerCase();
-    console.log(middleWord)
+//    console.log(middleWord)
     }
     for (i = word.length - 1; i >= 0; i--) {
         if (word[i] == ' ') {i--}
         newWord = newWord + word[i].toLowerCase();
-        console.log(newWord)
+//        console.log(newWord)
     }
     word = middleWord;
     if (word == newWord) {
@@ -109,6 +109,26 @@ function isPalyndrom(word) {
 
 // Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу.
 // Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
+function deleteDuplicateLetter(sentence) {
+    let midWord = '';
+    let counter = 0;
+    for (i = 0; i <= sentence.length - 1; i++){
+        for (j = 0; j <= sentence.length - 1; j++){
+                if (sentence[j].toLowerCase() == sentence[i].toLowerCase()) {
+                
+                counter++;
+                console.log(midWord)
+                console.log(counter)
+                } 
+            }
+            if (counter == 1) {
+                midWord = midWord + sentence[i].toLowerCase();
+            }
+            counter = 0;
+        }
+        return midWord  
+    }
+//    console.log(midWord);
 
 document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №2: ${inPow(8, 4)}</br>
@@ -116,10 +136,9 @@ document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №4: ${payTaxes(1000)}</br>
                     Функція №5: ${getRandomNumber(1, 10)}</br>
                     Функція №6: ${countLetter('и', 'вилисипидисти налисипидили')}</br>
-                    Функція №7: In progress....</br>
+                    Функція №7: <i>In progress....</i></br>
                     Функція №8: ${getRandomPassword()}</br>
                     Функція №9: ${deleteLetter('и', 'вилисипидисти')}</br>
                     Функція №10: ${isPalyndrom('Я несу гусеня')}</br>
-                    Функція №11: In progress....</br>
+                    Функція №11: ${deleteDuplicateLetter('Гєна ось той самий рушник який ти просив')}</br>
 </p>`)
-// Функція №10: ${isPalyndrom('сокос')}</br>
