@@ -115,10 +115,7 @@ function deleteDuplicateLetter(sentence) {
     for (i = 0; i <= sentence.length - 1; i++){
         for (j = 0; j <= sentence.length - 1; j++){
                 if (sentence[j].toLowerCase() == sentence[i].toLowerCase()) {
-                
                 counter++;
-                console.log(midWord)
-                console.log(counter)
                 } 
             }
             if (counter == 1) {
@@ -128,7 +125,6 @@ function deleteDuplicateLetter(sentence) {
         }
         return midWord  
     }
-//    console.log(midWord);
 
 document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №2: ${inPow(8, 4)}</br>
