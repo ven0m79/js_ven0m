@@ -14,10 +14,20 @@
 // Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 function inPow(number, pow) {
     let countResult = 1;
+    if (pow > 0){
     for (i = 1; i <= pow; i++) {
         countResult = countResult * number;
-    }
+        }
     return countResult;
+}
+    else if (pow < 0){
+    for (i = pow; i <= -1; i++) {
+        countResult = countResult * number;
+        }
+    countResult = 1 / countResult;
+    return countResult;
+}
+else return countResult;
 }
 
 // Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
@@ -34,7 +44,7 @@ function payTaxes(sum) {
 
 // Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
 function getRandomNumber(numberN, numberM) {
-    return n = parseInt(Math.random() * (numberM - numberN) + numberN);
+    return n = parseInt(Math.random() * (numberM - numberN + 1) + numberN);
 }
 
 // Створити функцію, яка рахує скільки разів певна буква повторюється в слові. Приклад: countLetter("а", "Асталавіста") -> 4
@@ -68,10 +78,10 @@ function convertCurrency(money) {
 }
 
 // Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам. Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
-function getRandomPassword(numberOfDigits=8) {
-    let maxX = Math.pow(10, +numberOfDigits);
-    let minX = Math.pow(10, +numberOfDigits-1);
-    return nDigits = parseInt(Math.random() * (maxX - minX)) + minX;
+function getRandomPassword(numberOfDigits = 8) {
+    let maxNumber = Math.pow(10, +numberOfDigits);
+    let minNumber = Math.pow(10, +numberOfDigits - 1);
+    return nDigits = parseInt(Math.random() * (maxNumber - minNumber)) + minNumber;
 }
 
 // Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
@@ -127,7 +137,7 @@ function deleteDuplicateLetter(sentence) {
     }
 
 document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
-                    Функція №2: ${inPow(8, 4)}</br>
+                    Функція №2: ${inPow(8, -4)}</br>
                     Функція №3: ${formatName('ІхТіаНдР')}</br>
                     Функція №4: ${payTaxes(1000)}</br>
                     Функція №5: ${getRandomNumber(1, 10)}</br>
