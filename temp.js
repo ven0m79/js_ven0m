@@ -15,21 +15,24 @@ return Currency
 }
 convertCurrency("200$")
 */
-debugger
+
 const students = ["Олександр", "Ігор", "Олена", "Іра", "Олексій", "Світлана"];
 
 let getPairs = function() {
     let hloptsi = [];
     let zhinky = [];
         const allPairs = [];
-    for (i = 0; i < students.length; i++){
-        if (students.lastIndexOf['а'] || students.lastIndexOf['я'] ) {
-            zhinky.push[i];
-            console.log(zhinky);
+        
+    for (let i of students){
+        if (i.endsWith('а')) {
+            zhinky.push(i);
             } else
-        hloptsi.push[i];
-        console.log(hloptsi);
-    }
-    return hloptsi, zhinky, allPairs;
+            hloptsi.push(i);
+       }
+       for (i = 0; i < hloptsi.length; i++) {
+        allPairs.push([hloptsi[i], zhinky[i]])
+        
+       }
+    return  allPairs;
     }
     console.log(getPairs());

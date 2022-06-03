@@ -52,7 +52,7 @@ function countLetter(letter, word) {
     let counter = 0;
     let l = word.length;
     for (i = 0; i < l; i++) {
-        if (word[i] == letter) {
+        if (word[i].toLowerCase() == letter) {
             counter++;
             }
     }
@@ -89,7 +89,7 @@ function deleteLetter(letter, word) {
     let l = word.length;
     let newWord ='';
     for (i = 0; i < l; i++) {
-        if (word[i] != letter){
+        if (word[i].toLowerCase() != letter){
             newWord = newWord + word[i]
         }
     }
@@ -141,10 +141,10 @@ document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №3: ${formatName('ІхТіаНдР')}</br>
                     Функція №4: ${payTaxes(1000)}</br>
                     Функція №5: ${getRandomNumber(1, 10)}</br>
-                    Функція №6: ${countLetter('и', 'вилисипидисти налисипидили')}</br>
+                    Функція №6: ${countLetter('и', 'вИлисипИдисти налисИпидили')}</br>
                     Функція №7: <i>In progress....</i></br>
                     Функція №8: ${getRandomPassword()}</br>
-                    Функція №9: ${deleteLetter('и', 'вилисипидисти')}</br>
+                    Функція №9: ${deleteLetter('и', 'вилИсипИдисти')}</br>
                     Функція №10: ${isPalyndrom('Я несу гусеня')}</br>
                     Функція №11: ${deleteDuplicateLetter('Гєна ось той самий рушник який ти просив')}</br>
 </p>`)
