@@ -61,21 +61,23 @@ function countLetter(letter, word) {
 // Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку.
 // Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$
 // Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.
-function convertCurrency(money) {
-    let temp = 0;
-    let uahCurrency = '';
-    let dollarsCurrency = '';
-    for (i = 0; i < money.length; i++){
-        if (money[i] != '$') {
-            temp = temp + money[i]
-            console.log(money[i], temp)
-        } else if (money[i] != uah) {
-
+function convertCurrency(money)  {
+    let moneyNumbers;
+    let tempMoney = money.toLowerCase();
+    const onlySymbols = tempMoney.replace(/[0-9]/g, '')
+             if (onlySymbols === '$') {
+                moneyNumbers = parseInt(tempMoney) * 35;
+                console.log('Це долар ' + moneyNumbers);
+                return 'Це долар ' + moneyNumbers;
+            } 
+            if (onlySymbols === 'uah') {
+                moneyNumbers = parseInt(tempMoney) / 35;
+                return 'Це гривня ' + moneyNumbers;
+            }
+            else
+            return 'Невідома валюта';
         }
-        uahCurrency = temp * 28.45
-    }
-    console.log(uahCurrency)
-}
+       console.log(convertCurrency('200uAh'))
 
 // Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам. Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 function getRandomPassword(numberOfDigits = 8) {
@@ -142,7 +144,7 @@ document.writeln(`<p> Функція №1: ${getMaxDigit("34565")}</br>
                     Функція №4: ${payTaxes(1000)}</br>
                     Функція №5: ${getRandomNumber(1, 10)}</br>
                     Функція №6: ${countLetter('и', 'вИлисипИдисти налисИпидили')}</br>
-                    Функція №7: <i>In progress....</i></br>
+                    Функція №7: ${convertCurrency('200uAh')}</br>
                     Функція №8: ${getRandomPassword()}</br>
                     Функція №9: ${deleteLetter('и', 'вилИсипИдисти')}</br>
                     Функція №10: ${isPalyndrom('Я несу гусеня')}</br>
