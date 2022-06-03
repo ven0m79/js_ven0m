@@ -20,8 +20,19 @@ const marks = [4, 5, 5, 3, 4, 5];
 //[["Олександр", "Олена"], [..], [...]];
 
 let getPairs = function() {
-const allPairs = [[students[0], students[2]], [students[1], students[3]], [students[4], students[5]]];
-return allPairs;
+let hloptsi = [];
+let zhinky = [];
+    const allPairs = [];
+for (i = 0; i < students.length; i++){
+    if (students.lastIndexOf[i] == 'а' || students.lastIndexOf[i] == 'я') {
+        zhinky.push[i];
+        console.log(zhinky);
+        } else
+    hloptsi.push[i];
+    console.log(hloptsi);
+}
+
+return hloptsi, zhinky;
 }
 console.log(getPairs());
 
