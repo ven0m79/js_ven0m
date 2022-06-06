@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW4_alexYermolenko.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW4_alexYermolenko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +21,15 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="" />
@@ -41,10 +46,12 @@
       <workItem from="1650552693894" duration="25000" />
       <workItem from="1650697811661" duration="3134000" />
       <workItem from="1652383871684" duration="9000" />
+      <workItem from="1654337443129" duration="6000" />
+      <workItem from="1654337495542" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
 </project>

@@ -14,7 +14,4 @@ const onlySymbols = tempMoney.replace(/[0-9]/g, '')
         else
         return 'Невідома валюта';
     }
-   
-
-
-console.log(convertCurrency('200uAh'))
+   console.log(convertCurrency('200uAh'))
