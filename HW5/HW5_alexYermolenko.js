@@ -15,7 +15,7 @@ if (max > min) {
 }
 else return console.log('Ви ввели min більше ніж max. Спробуйте ще')
 }
-console.log(getRandomArray(100, -20, 30))
+console.log('Мій массив: ' + getRandomArray(100, -20, 30))
 
 //2. Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ 
 //Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2
@@ -71,8 +71,15 @@ let getMedian = function(...numbers){
     }
     console.log(`Медіана - ` + getMedian(6, 2, 55.1, 11, 78, 2, 55, 77.9, 57, 87, 23, 2, 56, 3))
 
-//Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
+//5. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
 //Приклад: filterEvenNumbers(1, 2, 3, 4, 5, 6) -> [1, 3, 5]
+
+const filterEvenNumbers = function(...numbers) {
+    return filteredArray = numbers.filter((value) => {
+    return value % 2 !== 0;
+  });
+  }
+  console.log('Отсортований мій массив: ' + filterEvenNumbers(1, 2, 3, 4, 5, 6))
 
 //Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
 //Приклад: countPositiveNumbers(1, -2, 3, -4, -5, 6) -> 3
