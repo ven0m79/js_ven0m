@@ -85,15 +85,22 @@ const filterEvenNumbers = function(...numbers) {
 //Приклад: countPositiveNumbers(1, -2, 3, -4, -5, 6) -> 3
 console.log('Функція №6')
 const countPositiveNumbers = function(...numbers) {
-    let newArray = numbers.filter((item, array) => {
+  return numbers.filter((item) => {
       return item > 0
       })
-      return positiveNumberCounter = newArray.length;
-    }
-    console.log('Кількість чисел більше 0: ' + countPositiveNumbers(1, -2, 3, -4, -5, 6, 9))
+      .length
+  }
+  console.log('Кількість чисел більше 0: ' + countPositiveNumbers(1, -2, 3, -4, -5, 6, 9))
 
 //Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
 //Приклад: getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) -> [55, 55]
+console.log('Функція №7')
+const getDividedByFive = function(...numbers) {
+    return numbers.filter((item) => {
+      return item % 5 === 0
+    })
+    }
+    console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
 
 //Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*). При вирішенні цього завдання необхідно розбити масив на слова за допомогою функції .split(" "), після чого масив необхідно буде склеїти .join(" ") Погані слова: shit та fuck. Передбачте можливість розширювати список цих слів у майбутньому.
 //Приклад: replaceBadWords("Are you fucking kidding?") -> "Are you ****ing kidding?" Приклад: replaceBadWords("Holy shit!") -> "Holy ****!" Приклад: replaceBadWords("It's bullshit!") -> "It's bull****!"
