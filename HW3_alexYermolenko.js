@@ -1,12 +1,11 @@
 // Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
   function getMaxDigit(fullNumb) {
-    let str = fullNumb.toString();
-    let k = fullNumb.toString().length;
+    const str = fullNumb.toString();
     let maxDigit = 0;
-     for (i =0; i < k; i++) {
-         if (maxDigit < +str[i]){
-            maxDigit = +str[i];
-         }
+     for (let i = 0; i < str.length; i++) {
+         if (maxDigit < Number(str[i])){
+            maxDigit = Number(str[i]);
+            }
      }
       return maxDigit;
  }
@@ -15,13 +14,13 @@
 function inPow(number, pow) {
     let countResult = 1;
     if (pow > 0){
-    for (i = 1; i <= pow; i++) {
+    for (let i = 1; i <= pow; i++) {
         countResult = countResult * number;
         }
     return countResult;
 }
     else if (pow < 0){
-    for (i = pow; i <= -1; i++) {
+    for (let i = pow; i <= -1; i++) {
         countResult = countResult * number;
         }
     countResult = 1 / countResult;
@@ -32,27 +31,26 @@ else return countResult;
 
 // Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
 function formatName(name) {
-    return reName = name[0].toUpperCase() + name.slice(1).toLowerCase();
+    return name[0].toUpperCase() + name.slice(1).toLowerCase();
 }
 
 // Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 function payTaxes(sum) {
-    let taxes = 18;
-    let militaryTaxes = 1.5;
+    const taxes = 18;
+    const militaryTaxes = 1.5;
     return sumFixTaxes = sum - (sum * (taxes + militaryTaxes)/100);
 }
 
 // Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
 function getRandomNumber(numberN, numberM) {
-    return n = parseInt(Math.random() * (numberM - numberN + 1) + numberN);
+    return parseInt(Math.random() * (numberM - numberN + 1) + numberN);
 }
 
 // Створити функцію, яка рахує скільки разів певна буква повторюється в слові. Приклад: countLetter("а", "Асталавіста") -> 4
 function countLetter(letter, word) {
     let counter = 0;
-    let l = word.length;
-    for (i = 0; i < l; i++) {
-        if (word[i].toLowerCase() == letter) {
+    for (let i = 0; i < word.length; i++) {
+        if (word[i].toLowerCase() === letter.toLowerCase()) {
             counter++;
             }
     }
@@ -63,11 +61,10 @@ function countLetter(letter, word) {
 // Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.
 function convertCurrency(money)  {
     let moneyNumbers;
-    let tempMoney = money.toLowerCase();
+    const tempMoney = money.toLowerCase();
     const onlySymbols = tempMoney.replace(/[0-9]/g, '')
              if (onlySymbols === '$') {
                 moneyNumbers = parseInt(tempMoney) * 35;
-                console.log('Це долар ' + moneyNumbers);
                 return 'Це долар ' + moneyNumbers;
             } 
             if (onlySymbols === 'uah') {
@@ -77,7 +74,7 @@ function convertCurrency(money)  {
             else
             return 'Невідома валюта';
         }
-       console.log(convertCurrency('200uAh'))
+       
 
 // Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам. Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 function getRandomPassword(numberOfDigits = 8) {
@@ -88,10 +85,9 @@ function getRandomPassword(numberOfDigits = 8) {
 
 // Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 function deleteLetter(letter, word) {
-    let l = word.length;
     let newWord ='';
-    for (i = 0; i < l; i++) {
-        if (word[i].toLowerCase() != letter){
+    for (let i = 0; i < word.length; i++) {
+        if (word[i].toLowerCase() != letter.toLowerCase()){
             newWord = newWord + word[i]
         }
     }
@@ -103,12 +99,12 @@ function deleteLetter(letter, word) {
 function isPalyndrom(word) {
     let newWord = '';
     let middleWord = '';
-    for (i = 0; i <= word.length - 1; i++){
+    for (let i = 0; i <= word.length - 1; i++){
         if (word[i] == ' ') {i++}
     middleWord = middleWord + word[i].toLowerCase();
 //    console.log(middleWord)
     }
-    for (i = word.length - 1; i >= 0; i--) {
+    for (let i = word.length - 1; i >= 0; i--) {
         if (word[i] == ' ') {i--}
         newWord = newWord + word[i].toLowerCase();
 //        console.log(newWord)
@@ -124,8 +120,8 @@ function isPalyndrom(word) {
 function deleteDuplicateLetter(sentence) {
     let midWord = '';
     let counter = 0;
-    for (i = 0; i <= sentence.length - 1; i++){
-        for (j = 0; j <= sentence.length - 1; j++){
+    for (let i = 0; i <= sentence.length - 1; i++){
+        for (let j = 0; j <= sentence.length - 1; j++){
                 if (sentence[j].toLowerCase() == sentence[i].toLowerCase()) {
                 counter++;
                 } 

@@ -4,7 +4,7 @@ const myArray = [];
 let myValue = 0;
 if (max > min) {
     for (let i = 0; i < length; i++) {
-        myValue = Math.floor(Math.random() * length)
+        myValue = parseInt(Math.random() * (max - min + 1) + min);
         if (myValue >= min && myValue <= max) {
         myArray.push(myValue);
         }
@@ -14,14 +14,25 @@ if (max > min) {
 }
 else return console.log('Ви ввели min більше ніж max. Спробуйте ще')
 }
-console.log(getRandomArray(100, 20, 30))
+console.log(getRandomArray(100, -20, 30))
 
 //Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ 
 //Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2
 let getModa = function(...numbers) {
-    myArray = [];
+    const myArray = numbers;
+    let counter = 0;
+    const numberModa = 0;
+    for (let i = 0; i <= myArray.length - 1; i++){
+        for (let j = 0; j <= myArray.length - 1; j++){
+        if (numbers[j] == numbers[i]) {
+            numberModa++
+        }
+        }
+        console.log(numbers[i])
+    }
     
-    return myArray;
+
+    return numberModa;
 }
 console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
 
