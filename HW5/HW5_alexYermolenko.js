@@ -92,7 +92,7 @@ const countPositiveNumbers = function(...numbers) {
   }
   console.log('Кількість чисел більше 0: ' + countPositiveNumbers(1, -2, 3, -4, -5, 6, 9))
 
-//Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
+//7. Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
 //Приклад: getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) -> [55, 55]
 console.log('Функція №7')
 const getDividedByFive = function(...numbers) {
