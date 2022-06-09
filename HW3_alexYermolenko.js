@@ -99,7 +99,7 @@ function deleteLetter(letter, word) {
 function isPalyndrom(word) {
     let newWord = '';
     let middleWord = '';
-    for (let i = 0; i <= word.length - 1; i++){
+    for (let i = 0; i < word.length; i++){
         if (word[i] == ' ') {i++}
     middleWord = middleWord + word[i].toLowerCase();
 //    console.log(middleWord)

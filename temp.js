@@ -14,7 +14,7 @@ let getModa = function(...numbers) {
 }, {})
 
 console.log(objNumbers);
-console.log(objNumbers)
+
 }
 getModa(6, 2, 55, 11, 78, 2.3, 55, 77, 57, 87, 23, 2, 56, 3, 2)
 
