@@ -1,4 +1,5 @@
-//Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел. У функції є параметри: length - довжина масиву, min – мінімальне значення цілого числа, max – максимальне значення цілого числа. Приклад: getRandomArray(15, 1, 100) –> [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2]
+//1. Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел. У функції є параметри: length - довжина масиву, min – мінімальне значення цілого числа, max – максимальне значення цілого числа. Приклад: getRandomArray(15, 1, 100) –> [6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2]
+console.log('Функція №1')
 let getRandomArray = function(length, min, max) {
 const myArray = []; 
 let myValue = 0;
@@ -16,8 +17,9 @@ else return console.log('Ви ввели min більше ніж max. Спроб
 }
 console.log(getRandomArray(100, -20, 30))
 
-//Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ 
+//2. Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ 
 //Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2
+console.log('Функція №2')
 let getModa = function(...numbers) {
     const myArray = numbers.filter(item => {return !(item % 1)})
     const objNumbers = myArray.reduce(function(myArray, item) {
@@ -29,7 +31,7 @@ let getModa = function(...numbers) {
     }
     return myArray
 }, {})
-console.log(
+console.log('Мода = ' + 
   Object.keys(objNumbers).find((el) => {
     return objNumbers[el] === Math.max(...Object.values(objNumbers))
   })
@@ -38,9 +40,9 @@ console.log(
 }
 getModa(6, 2, 55, 11, 78, 2.3, 55, 77, 57, 87, 23, 2, 56, 3, 2)
 
-//Створіть функцію getAverage(...numbers) – яка рахує середнє арифметичне всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
+//3. Створіть функцію getAverage(...numbers) – яка рахує середнє арифметичне всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
 //Приклад: getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 34.4
-
+console.log('Функція №3')
 let getAverage = function(...numbers) {
     let middleNumber = 0;
     const myArray = numbers.filter(item => {return !(item % 1)})
@@ -49,10 +51,25 @@ let getAverage = function(...numbers) {
       }, 0)
       return middleNumber = sumNumber/(myArray.length)
     }
-    console.log(getAverage(6, 2, 55, 11, 78, 2, 55.5, 77, 57, 87, 23, 2, 56, 3, 2))
+    console.log('Cереднє арифметичне всіх переданих аргументів ' + getAverage(6, 2, 55, 11, 78, 2, 55.5, 77, 57, 87, 23, 2, 56, 3, 2))
 
-//Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
+//4. Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
 //Приклад: getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 23 Приклад: getMedian(1, 2, 3, 4) –> 2.5 Приклад: getMedian(1, 2, 3, 4, 5) –> 3
+console.log('Функція №4')
+let getMedian = function(...numbers){
+    const myArray = numbers.filter(item => {return !(item % 1)})
+      .sort((a, b) => a - b);
+    let centerArrayIndex = myArray.length / 2
+      console.log('Отсортований мій массив: ' + myArray)
+      if (centerArrayIndex % 2 === 0){
+        console.log('Довжина масиву парна')
+        return (myArray[centerArrayIndex-1] + myArray[centerArrayIndex])/2
+      } else 
+      console.log('Довжина масиву непарна');
+      centerArrayIndex = Math.floor(centerArrayIndex)
+      return (myArray[centerArrayIndex])
+    }
+    console.log(`Медіана - ` + getMedian(6, 2, 55.1, 11, 78, 2, 55, 77.9, 57, 87, 23, 2, 56, 3))
 
 //Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
 //Приклад: filterEvenNumbers(1, 2, 3, 4, 5, 6) -> [1, 3, 5]
