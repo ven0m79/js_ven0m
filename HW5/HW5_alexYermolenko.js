@@ -19,25 +19,37 @@ console.log(getRandomArray(100, -20, 30))
 //Створіть функцію getModa(...numbers) – яка вираховує моду всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ 
 //Приклад: getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 2
 let getModa = function(...numbers) {
-    const myArray = numbers;
-    let counter = 0;
-    const numberModa = 0;
-    for (let i = 0; i <= myArray.length - 1; i++){
-        for (let j = 0; j <= myArray.length - 1; j++){
-        if (numbers[j] == numbers[i]) {
-            numberModa++
-        }
-        }
-        console.log(numbers[i])
+    const myArray = numbers.filter(item => {return !(item % 1)})
+    const objNumbers = myArray.reduce(function(myArray, item) {
+    if (item in myArray) {
+        myArray[item]++
     }
-    
+    else {
+        myArray[item] = 1
+    }
+    return myArray
+}, {})
+console.log(
+  Object.keys(objNumbers).find((el) => {
+    return objNumbers[el] === Math.max(...Object.values(objNumbers))
+  })
+)
 
-    return numberModa;
 }
-console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
+getModa(6, 2, 55, 11, 78, 2.3, 55, 77, 57, 87, 23, 2, 56, 3, 2)
 
 //Створіть функцію getAverage(...numbers) – яка рахує середнє арифметичне всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
 //Приклад: getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 34.4
+
+let getAverage = function(...numbers) {
+    let middleNumber = 0;
+    const myArray = numbers.filter(item => {return !(item % 1)})
+    sumNumber = myArray.reduce(function(acc, item) {
+        return item + acc
+      }, 0)
+      return middleNumber = sumNumber/(myArray.length)
+    }
+    console.log(getAverage(6, 2, 55, 11, 78, 2, 55.5, 77, 57, 87, 23, 2, 56, 3, 2))
 
 //Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів. НЕЦІЛІ ЧИСЛА ІГНОРУЮТЬСЯ
 //Приклад: getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 23 Приклад: getMedian(1, 2, 3, 4) –> 2.5 Приклад: getMedian(1, 2, 3, 4, 5) –> 3
