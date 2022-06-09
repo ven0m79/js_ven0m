@@ -1,9 +1,2 @@
-//5. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
-//Приклад: filterEvenNumbers(1, 2, 3, 4, 5, 6) -> [1, 3, 5]
-
-const filterEvenNumbers = function(...numbers) {
-  return filteredArray = numbers.filter((value) => {
-  return value % 2 !== 0;
-});
-}
-console.log(filterEvenNumbers(1, 2, 3, 4, 5, 6))
+//7. Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
+//Приклад: getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) -> [55, 55]

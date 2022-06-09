@@ -69,11 +69,11 @@ let getMedian = function(...numbers){
       centerArrayIndex = Math.floor(centerArrayIndex)
       return (myArray[centerArrayIndex])
     }
-    console.log(`Медіана - ` + getMedian(6, 2, 55.1, 11, 78, 2, 55, 77.9, 57, 87, 23, 2, 56, 3))
+    console.log('Медіана - ' + getMedian(6, 2, 55.1, 11, 78, 2, 55, 77.9, 57, 87, 23, 2, 56, 3))
 
 //5. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
 //Приклад: filterEvenNumbers(1, 2, 3, 4, 5, 6) -> [1, 3, 5]
-
+console.log('Функція №5')
 const filterEvenNumbers = function(...numbers) {
     return filteredArray = numbers.filter((value) => {
     return value % 2 !== 0;
@@ -81,8 +81,16 @@ const filterEvenNumbers = function(...numbers) {
   }
   console.log('Отсортований мій массив: ' + filterEvenNumbers(1, 2, 3, 4, 5, 6))
 
-//Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
+//6. Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
 //Приклад: countPositiveNumbers(1, -2, 3, -4, -5, 6) -> 3
+console.log('Функція №6')
+const countPositiveNumbers = function(...numbers) {
+    let newArray = numbers.filter((item, array) => {
+      return item > 0
+      })
+      return positiveNumberCounter = newArray.length;
+    }
+    console.log('Кількість чисел більше 0: ' + countPositiveNumbers(1, -2, 3, -4, -5, 6, 9))
 
 //Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
 //Приклад: getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) -> [55, 55]
