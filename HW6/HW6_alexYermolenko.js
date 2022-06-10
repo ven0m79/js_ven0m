@@ -66,7 +66,12 @@ console.log(getAverageMark(students[0]))
 //по переданому студенту (вам знадобиться функція з попереднього завдання). ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
 
 const getStudentInfo = ((stud) => {
-
+const studentsInfos = {
+  course: stud.course,
+  name: stud.name,
+  averageMark: getAverageMark(stud)
+}
+return studentsInfos
 })
 console.log(getStudentInfo(students[0]))
 
