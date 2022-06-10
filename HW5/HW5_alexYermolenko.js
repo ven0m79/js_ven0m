@@ -44,12 +44,11 @@ getModa(6, 2, 55, 11, 78, 2.3, 55, 77, 57, 87, 23, 2, 56, 3, 2, 3, 3)
 //Приклад: getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) –> 34.4
 console.log('Функція №3')
 let getAverage = function(...numbers) {
-    let middleNumber = 0;
     const myArray = numbers.filter(item => {return !(item % 1)})
     sumNumber = myArray.reduce(function(acc, item) {
         return item + acc
       }, 0)
-      return middleNumber = sumNumber/(myArray.length)
+      return sumNumber/(myArray.length)
     }
     console.log('Cереднє арифметичне всіх переданих аргументів ' + getAverage(6, 2, 55, 11, 78, 2, 55.5, 77, 57, 87, 23, 2, 56, 3, 2))
 
@@ -67,7 +66,7 @@ let getMedian = function(...numbers){
       } else 
       console.log('Довжина масиву непарна');
       centerArrayIndex = Math.floor(centerArrayIndex)
-      return (myArray[centerArrayIndex])
+      return myArray[centerArrayIndex]
     }
     console.log('Медіана - ' + getMedian(6, 2, 55.1, 11, 78, 2, 55, 77.9, 57, 87, 23, 2, 56, 3))
 
