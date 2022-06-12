@@ -26,7 +26,7 @@ const students = [{
 
 //1. Створіть функцію getSubjects(students[0] --> ["Math", "Algorithms", "Data science"] - яка повертає список предметів для конкретного студента. 
 //Зверніть увагу – назву предмету необхідно повертати з великої літери, а _ – замінити на пробіл
-
+console.log('Функция №1');
 const getSubjects = ((stud) => {
  return arraySubjects = Object.keys(stud.subjects)
  .map((item) => {
@@ -37,7 +37,7 @@ console.log(getSubjects(students[0]))
 
 //2. Створіть функцію getAverageMark(students[0]) --> 3.79 – яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ. 
 //Оцінку округліть до 2ого знаку. Можна використовувати функції, написані у попередніх домашніх завданнях :)
-
+console.log('Функция №2');
 const getAverageMark = ((stud) => {
 let newArray = [];
 const arrayMarks = Object.values(stud.subjects)
@@ -53,7 +53,7 @@ console.log(getAverageMark(students[0]))
 
 //3. Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} – яка повертає інформацію загального виду 
 //по переданому студенту (вам знадобиться функція з попереднього завдання). ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
-
+console.log('Функция №3');
 const getStudentInfo = ((stud) => {
 const studentsInfos = {
   course: stud.course,
@@ -65,7 +65,7 @@ return studentsInfos
 console.log(getStudentInfo(students[0]))
 
 //4. Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
-
+console.log('Функция №4');
 const getStudentsNames = ((studName) => {
   const value = studName.map((item) => {
   return item.name
@@ -76,6 +76,7 @@ return value.sort();
 console.log(getStudentsNames(students))
 
 //5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
+console.log('Функция №5');
 const getBestStudent = ((findBestStudent) => {
   let bestMark = 0;
   let bestStudent;
@@ -92,15 +93,20 @@ console.log(getBestStudent(students))
 
 //6. Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, 
 //а значення – кількість їх повторень.
-
+console.log('Функция №6');
 const calculateWordLetters = ((param) => {
-  newObj = {};
-  x = '';
-  y = 0;
-  z = [];
-
-
-  
+  const newArray = param.split('');
+  console.log(newArray)
+  const res = newArray.reduce((acc, item) => {
+    if (acc[item]) {
+      acc[item]++
+  }
+  else {
+      acc[item] = 1
+  }
+  return acc
+  }, {})
+ return res
 })
 
-console.log(calculateWordLetters("тест"))
+console.log(calculateWordLetters('тест'))

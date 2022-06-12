@@ -40,20 +40,3 @@ const getAverageMark = ((stud) => {
   return (result / newArray.length).toFixed(2)
   })
   console.log(getAverageMark(students[0]))
-
-
-
-
-
-
-
-const getBestStudent = ((findBestStudent) => {
-  let bestMark = 0;
-  let bestStudent;
-for (let i = 0; i < findBestStudent.length; i++) {
-  bestStudent = findBestStudent[i].name;
-  bestMark = getAverageMark(findBestStudent[i]);
-return bestStudent
-}
-})
-  console.log(getBestStudent(students))
