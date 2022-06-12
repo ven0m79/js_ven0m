@@ -96,7 +96,7 @@ console.log(getBestStudent(students))
 console.log('Функция №6');
 const calculateWordLetters = ((param) => {
   const newArray = param.split('');
-  console.log(newArray)
+//console.log(newArray)
   const res = newArray.reduce((acc, item) => {
     if (acc[item]) {
       acc[item]++
