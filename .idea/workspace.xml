@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="" />
+    <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/HW6/HW6_alexYermolenko.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW6/HW6_alexYermolenko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,10 +67,28 @@
       <workItem from="1654337443129" duration="6000" />
       <workItem from="1654337495542" duration="15000" />
       <workItem from="1654798059404" duration="37000" />
+      <workItem from="1654962807977" duration="78000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1654962878008">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816/1920.0.1920.1032@0.0.1536.816" timestamp="1654962878008" />
   </component>
 </project>

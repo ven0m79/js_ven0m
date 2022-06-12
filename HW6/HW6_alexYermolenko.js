@@ -1,8 +1,3 @@
-/*Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
-Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
-Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, 
-а значення – кількість їх повторень.*/
-
 const students = [{
   name: "Tanya",
   course: 3,
@@ -72,10 +67,40 @@ console.log(getStudentInfo(students[0]))
 //4. Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
 const getStudentsNames = ((studName) => {
-const value = studName.map((item) => {
-return item.name
-})
+  const value = studName.map((item) => {
+  return item.name
+  })
 return value.sort();
 })
 
 console.log(getStudentsNames(students))
+
+//5. Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
+const getBestStudent = ((findBestStudent) => {
+  let bestMark = 0;
+  let bestStudent;
+  for (let i = 0; i < findBestStudent.length; i++) {
+    if (getAverageMark(findBestStudent[i]) > bestMark) {
+    bestMark = getAverageMark(findBestStudent[i])
+    bestStudent = findBestStudent[i].name
+    }
+  }
+  return bestStudent
+
+})
+console.log(getBestStudent(students))
+
+//6. Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, 
+//а значення – кількість їх повторень.
+
+const calculateWordLetters = ((param) => {
+  newObj = {};
+  x = '';
+  y = 0;
+  z = [];
+
+
+  
+})
+
+console.log(calculateWordLetters("тест"))
