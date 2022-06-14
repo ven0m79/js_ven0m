@@ -3,7 +3,7 @@ console.log('Функція №1')
 let getRandomArray = function(length, min, max) {
 const myArray = []; 
 let myValue = 0;
-if (max > min) {
+if (max >= min) {
     for (let i = 0; i < length; i++) {
         myValue = parseInt(Math.random() * (max - min + 1) + min);
         if (myValue >= min && myValue <= max) {
@@ -96,10 +96,10 @@ const countPositiveNumbers = function(...numbers) {
 console.log('Функція №7')
 const getDividedByFive = function(...numbers) {
     return numbers.filter((item) => {
-      return item % 5 === 0
+      return (item % 5 === 0 && item !==0)
     })
     }
-    console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
+    console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2, 0))
 
 //Створіть функцію replaceBadWords(string) – яка 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*). При вирішенні цього завдання необхідно розбити масив на слова за допомогою функції .split(" "), після чого масив необхідно буде склеїти .join(" ") Погані слова: shit та fuck. Передбачте можливість розширювати список цих слів у майбутньому.
 //Приклад: replaceBadWords("Are you fucking kidding?") -> "Are you ****ing kidding?" Приклад: replaceBadWords("Holy shit!") -> "Holy ****!" Приклад: replaceBadWords("It's bullshit!") -> "It's bull****!"
