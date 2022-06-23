@@ -1,13 +1,28 @@
-/*Зродіть 25 квадратів розміру 50х50 пікселів кожен, зафарбовані у випадковий колір. Квадрати мають розташовуватись по 5 в ряд.
+const randomColor = function() {
+    return `rgb(${Math.floor(256*Math.random())},${Math.floor(256*Math.random())},${Math.floor(256*Math.random())})`
+}
+console.log(randomColor());
 
-Щоб квадрати з'явились на сторінці, необхідно викликати функцію generateBlocks();
+let container = document.querySelector('#root')
+console.log(container);
 
+function generateBlocks() {
+for (let i = 0; i < 25; i++) {
+    let div = document.createElement('div');
+    div.classList.add('quad');
+    div.style.backgroundColor = randomColor();
+    container.append(div);
+    }
+}
+generateBlocks()
 
-
-Advanced зробіть так, щоб квадрати змінювали колір раз на секунду.
-
-Щоб квадрати з'явились на сторінці та почали змінюватись, необхідно викликати функцію generateBlocksInterval(); 
-Приклад виконаного ДЗ на відео */
-const generateBlocks=(() => {
-    
-})
+function generateBlocksInterval() {
+quad = document.querySelectorAll('.quad')
+console.log(quad);
+setInterval(() => {
+    quad.forEach(element => {
+        element.style.backgroundColor = randomColor();
+    });
+}, 1000);
+}
+generateBlocksInterval()

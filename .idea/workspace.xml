@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW6/HW6_alexYermolenko.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW6/HW6_alexYermolenko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW9/HW9_alexYermolenko.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/HW9_alexYermolenko.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW9/HW9_alexYermolenko.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/HW9_alexYermolenko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +72,7 @@
       <workItem from="1654337495542" duration="15000" />
       <workItem from="1654798059404" duration="37000" />
       <workItem from="1654962807977" duration="78000" />
+      <workItem from="1655905765087" duration="140000" />
     </task>
     <servers />
   </component>
@@ -84,6 +89,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1654962878008">
