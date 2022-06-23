@@ -1,28 +1,30 @@
 const randomColor = function() {
-    return `rgb(${Math.floor(256*Math.random())},${Math.floor(256*Math.random())},${Math.floor(256*Math.random())})`
+    const MAX_RGB_VALUE = 256;
+    return `rgb(${Math.floor(MAX_RGB_VALUE*Math.random())},${Math.floor(MAX_RGB_VALUE*Math.random())},${Math.floor(MAX_RGB_VALUE*Math.random())})`
 }
-console.log(randomColor());
 
 let container = document.querySelector('#root')
-console.log(container);
-
 function generateBlocks() {
-for (let i = 0; i < 25; i++) {
+    const MAX_COUNT_QUAD = 25
+for (let i = 0; i < MAX_COUNT_QUAD; i++) {
     let div = document.createElement('div');
     div.classList.add('quad');
     div.style.backgroundColor = randomColor();
     container.append(div);
     }
 }
-generateBlocks()
 
 function generateBlocksInterval() {
-quad = document.querySelectorAll('.quad')
-console.log(quad);
+quadElem = document.querySelectorAll('.quad')
 setInterval(() => {
-    quad.forEach(element => {
+    quadElem.forEach(element => {
         element.style.backgroundColor = randomColor();
     });
 }, 1000);
 }
-generateBlocksInterval()
+
+function init() {
+    generateBlocks()
+    generateBlocksInterval()
+}
+init()
