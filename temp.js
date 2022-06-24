@@ -1,34 +1,16 @@
-
-
-const randomColor = function() {
-    return `rgb(${Math.floor(256*Math.random())},${Math.floor(256*Math.random())},${Math.floor(256*Math.random())})`
+function doSmth(e, index) {
+    e.stopPropagation();    console.log(`Hi from ${index}`);
 }
-console.log(randomColor());
-
-let container = document.querySelector('#root')
-console.log(container);
-
-function generateBlocks() {
-for (let i = 0; i < 25; i++) {
-    let div = document.createElement('div');
-    div.classList.add('quad');
-    div.style.backgroundColor = randomColor();
-    container.append(div);
-    }
+function doElse() {
+    console.log('4d nah');
 }
-generateBlocks()
+
+const parent = document.querySelector('.parent');
+const child1 = document.querySelector('.child1');
+const child2 = document.querySelector('.child2');
 
 
+[parent, child1, child2].forEach((el, index) => 
+    el.addEventListener("click", (e) => doSmth(e, index))
+    );
 
-
-function generateBlocksInterval() {
-quad = document.querySelectorAll('.quad')
-console.log(quad);
-/*setInterval(() => {
-    quad.forEach(element => {
-        
-    });
-    
-}, 1000);*/
-}
-generateBlocksInterval()
