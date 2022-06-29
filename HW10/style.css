@@ -39,7 +39,7 @@ button {
     0 2px 0 rgba(255,255,255,.4),
     inset 0 2px 0 rgba(0,0,0,.1);
   }
-.wrapper {
+#wrapper {
     display: flex;
     background-image: url(img/csgo.jpg);
     height: 100vh;
