@@ -20,9 +20,9 @@ function playSmth(e) {
 
 longList.addEventListener("click", playSmth);
 window.addEventListener("keydown", (e) => {
-    keyArray.forEach ((item, index) => {
+    keyArray.forEach((item, index) => {
         if (item === e.code) {
-            const keyDown = document.getElementById(index+1);
+            const keyDown = document.getElementById(index + 1);
             console.log(keyDown);
             keyDown.classList.add("active");
             //console.log(audioArray[index]);
