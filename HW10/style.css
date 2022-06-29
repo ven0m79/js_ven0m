@@ -11,19 +11,19 @@ button {
     cursor: pointer;
 }
 .circ-button {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
     cursor: pointer;
-    justify-content: center;
     background-color: rgb(170, 155, 255, .2);
-    display: flex;
-    flex-flow: wrap;
     width: 120px;
     height: 120px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 36px;
-    color: #ffffff;
-
+    font-size: 20px;
+    color: cornsilk;
     border-radius: 50%;
     margin-bottom: 40px;
+    
 
     box-shadow: inset 0 2px 0 rgba(255,255,255,.6),
     0 2px 0 rgba(0,0,0,.1),
@@ -31,13 +31,15 @@ button {
 }
 .circ-button:hover {
     cursor: pointer;
-    justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 37px;
-    color: #ff0000;
+    font-size: 21px;
     box-shadow: inset 0 0 20px rgba(0,0,0,.2),
     0 2px 0 rgba(255,255,255,.4),
     inset 0 2px 0 rgba(0,0,0,.1);
+  }
+.circ-button::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
   }
 #wrapper {
     display: flex;
