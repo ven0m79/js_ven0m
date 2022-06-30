@@ -1,2 +1,15 @@
-i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
-console.log(i);
+function makeWorker() {
+    let name = "Pete";
+  
+    return function() {
+      alert(name);
+    };
+  }
+  
+  let name = "John";
+  
+  // create a function
+  let work = makeWorker();
+  
+  // call it
+  work(); //

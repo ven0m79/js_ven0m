@@ -1,4 +1,4 @@
-const longList = document.querySelector("#wrapper");
+const wrapperID = document.querySelector("#wrapper");
 
 const audioArray = [
     new Audio('sound/ak47.mp3'),
@@ -10,7 +10,7 @@ const audioArray = [
 ]
 const keyArray = ['KeyA', 'KeyS', 'KeyD', 'KeyJ', 'KeyK', 'KeyL']
 
-function playSmth(e) {
+function playAudioOnClick(e) {
     if (e.target.id !== "wrapper") {
         console.log(e.target.id);
         audioArray[e.target.id - 1].currentTime = 0;
@@ -18,7 +18,7 @@ function playSmth(e) {
     }
 }
 
-longList.addEventListener("click", playSmth);
+wrapperID.addEventListener("click", playAudioOnClick);
 window.addEventListener("keydown", (e) => {
     keyArray.forEach((item, index) => {
         if (item === e.code) {
