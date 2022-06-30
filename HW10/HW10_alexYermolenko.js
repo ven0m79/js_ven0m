@@ -1,5 +1,4 @@
 const wrapperID = document.querySelector("#wrapper");
-
 const audioArray = [
     new Audio('sound/ak47.mp3'),
     new Audio('sound/aug.mp3'),
@@ -25,12 +24,9 @@ window.addEventListener("keydown", (e) => {
             const keyDown = document.getElementById(index + 1);
             console.log(keyDown);
             keyDown.classList.add("active");
-            //console.log(audioArray[index]);
             audioArray[index].currentTime = 0;
             audioArray[index].play();
-
             setTimeout(() => keyDown.classList.remove("active"), 100)
-
         }
     })
 })
