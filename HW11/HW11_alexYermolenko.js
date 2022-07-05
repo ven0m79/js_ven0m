@@ -10,33 +10,17 @@
 
 (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms */
 async function getRandomChinese(length) {
+    const DELAY_INTREVAL = 50;
     let i = 0;
-    array = [];
+    arrayOfIeroglifs = [];
     while (i < length) {
-        setTimeout(() => {
+        await new Promise ((res) => {
             const sign = String.fromCharCode(Date.now()).slice(-5);
-            array.push(sign);
-            console.log(array);
-                       
-        }, 500);
-        i++ 
+            arrayOfIeroglifs.push(sign);
+            setTimeout(res, DELAY_INTREVAL);
+        i++ })
     };
 };
-getRandomChinese(5)
-
-
-/*  async function getRandomChinese(length) {
-    let i = 0; 
-    while (i < length) {
-         const promise = new Promise (res, rej) {
-               
-         setTimeout(() => {     
-             const sign = String.fromCharCode(Date.now()).slice(-5);     
-             console.log(sign);
-             }, 5000);
-         };
-             i++
-     } 
-     
- }
- getRandomChinese(5) */
+getRandomChinese(10).then(() => {
+    console.log(arrayOfIeroglifs); //шановні колеги, вивід зробив масивом, бо так красивіше))) join вмію юзати, якщ що;-)
+})
