@@ -22,16 +22,15 @@ ADVANCED: Додайте кнопку перекладу на вукийську
 Для цього достатньо додати до будь-якого запиту: ?format=wookiee.
 При фантазії – можете ще і текст кнопок перекласти :) */
 
-const request = fetch('https://swapi.dev/api/people/');
+const button = document.querySelector('.users')
+button.addEventListener('click', getUsers)
 
-function renderUsers(array) {
-    array
+const BASE_END_POINT = "https://swapi.dev/api/";
+const userFetch = fetch('https://swapi.dev/api/people/');
+
+async function getUsers() {
+    const request = await fetch(`${BASE_END_POINT}people/`);
+    const response = await request.json();
+    console.log({ response });
 }
-
-request
-    .then((res) => {
-        return res.json();
-    }).then((res) => {
-        console.log({ res });
-    })
-
+;
