@@ -1,9 +1,8 @@
-const PLANETS_COUNT = 60
 let container = document.querySelector('#wrapper')
-const button = document.querySelector('.users')
-const button1 = document.querySelector('.planets')
-button.addEventListener('click', getUsers)
-button1.addEventListener('click', getPlanets)
+const buttonGetUsers = document.querySelector('.users')
+const buttonGetPlanets = document.querySelector('.planets')
+buttonGetUsers.addEventListener('click', getUsers)
+buttonGetPlanets.addEventListener('click', getPlanets)
 
 const BASE_END_POINT = "https://swapi.dev/api/";
 
@@ -11,7 +10,7 @@ async function getUsers() {
     container.innerHTML = "";
     const request = await fetch(`${BASE_END_POINT}films/2/`);
     const response = await request.json();
-    console.log({response})
+    console.log({ response })
 
     for (promise of response.characters) {
         const hero = await fetch(promise).then((res) => res.json());
@@ -26,16 +25,23 @@ async function getUsers() {
     }
 }
 
-async function getPlanets() {
+async function getPlanets(page = 2) {
     container.innerHTML = "";
-    const requestPlanets = await fetch(`${BASE_END_POINT}planets/`);
+    const requestPlanets = await fetch(`${BASE_END_POINT}planets/?page=2`);
     const responsePlanets = await requestPlanets.json();
-    console.log({responsePlanets});
-    for (promise1 of responsePlanets.results.planetsArray) {
-        const planet = await fetch(promise1).then((res) => res.json());
-        console.log({planet})
-    
-    
-    }
+    console.log({ responsePlanets });
+
+    responsePlanets.results.forEach(planet => {
+        div = document.createElement('div');
+        div.classList.add('circ-button');
+        div.textContent = `Name:${planet.name}`;
+        container.append(div);
+    })
+
+
+
 }
+
+
+
 
