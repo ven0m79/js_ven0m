@@ -1,36 +1,41 @@
-/* https://swapi.dev – Працювати необхідно з цим API.
-
-Інформацію про те, як влаштовано АПІ шукайте в документації!
-
-Уявіть, що вам прийшло завдання на работі – все що залишив бекендер - це таку документацію та полетів у відпустку)
-
-Дуже заохочується максимально креативний підхід до цього завдання – робіть стилі, додайте який-небудь приємний шрифт 
-(Якщо зовсім туго з ідеями шрифтів візьміть Roboto с Google Fonts).
-
-Створіть кнопку: "отримати інформацію". При натисканні на неї отримайте та відобразіть інформацію про усіх персонажів 5 епізоду зоряних війн(films/2). 
-Зверніть увагу, що необхідно вивчити документацію та на її основі вивести інформацію. 
-Виводимо тільки: повне ім'я персонажа, дата народження, стать(якщо зробите іконкою, буде взагалі ідеально).
-БОНУС ПЛЮС: Якщо додумаєтесь, як зберігати і виводити фотки персонажів – буде дуже круто.
-Я дам підказку: можна створити об'єкт з ключ=посилання_на_персонажа, значення=посилання_на_фотку
-У самому АПІ фотографій нмає, але ДЗшка стане набагато приємніше виглядати з зображеннями персонажів
-Виведіть список усіх планет, які були у зоряних війнах.
-Додайте кнопку next, яка завантажить наступну сторінку зі списком планет. Попередня сторінка при цьому має пропасти. (відбувається заміна даних)
-ADVANCED: додайте до 1 завдання поле вводу з номером фільму(номер по порядку випуску фильму). 
-Тепер при натисканні на кнопку – необхідно отримати інформацію не про 5тий епізод, а про фільм, номер якого вказано у полі вводу.
-Якщо вказана цифра 1 – потрібно передати запит на /films/1
-ADVANCED: Додайте кнопку перекладу на вукийську мову. Після натискання на кнопку – весь отриманий по апі контент повинен перекластись на мову вуки.
-Для цього достатньо додати до будь-якого запиту: ?format=wookiee.
-При фантазії – можете ще і текст кнопок перекласти :) */
-
+const PLANETS_COUNT = 60
+let container = document.querySelector('#wrapper')
 const button = document.querySelector('.users')
+const button1 = document.querySelector('.planets')
 button.addEventListener('click', getUsers)
+button1.addEventListener('click', getPlanets)
 
 const BASE_END_POINT = "https://swapi.dev/api/";
-const userFetch = fetch('https://swapi.dev/api/people/');
 
 async function getUsers() {
-    const request = await fetch(`${BASE_END_POINT}people/`);
+    container.innerHTML = "";
+    const request = await fetch(`${BASE_END_POINT}films/2/`);
     const response = await request.json();
-    console.log({ response });
+    console.log({response})
+
+    for (promise of response.characters) {
+        const hero = await fetch(promise).then((res) => res.json());
+        const heroName = hero.name;
+        const heroAge = hero.birth_year;
+        const heroGender = hero.gender;
+
+        let div = document.createElement('div');
+        div.classList.add('circ-button');
+        div.textContent = `Name:${heroName}, Age:${heroAge}, Gender:${heroGender}`;
+        container.append(div);
+    }
 }
-;
+
+async function getPlanets() {
+    container.innerHTML = "";
+    const requestPlanets = await fetch(`${BASE_END_POINT}planets/`);
+    const responsePlanets = await requestPlanets.json();
+    console.log({responsePlanets});
+    for (promise1 of responsePlanets.results.planetsArray) {
+        const planet = await fetch(promise1).then((res) => res.json());
+        console.log({planet})
+    
+    
+    }
+}
+
