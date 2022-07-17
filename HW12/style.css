@@ -45,13 +45,13 @@ button {
   }
 #wrapper {
     display: flex;
-    
+    margin: 0px auto;
     width: 920px;
 
     position: relative;
 
     flex-wrap: wrap;
-    border: 3px dashed green;
+
 
 
 }
