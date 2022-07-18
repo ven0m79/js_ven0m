@@ -8,8 +8,18 @@ body {
     height: 90vh;
 }
 button {
+    margin: 5px 5px 5px 5px;
     padding: 10px 20px;
     background-color: brown;
+    font-weight: bold;
+    font-size: 16px;
+    color: burlywood;
+    cursor: pointer;
+}
+button:hover {
+    margin: 5px 5px 5px 5px;
+    padding: 10px 20px;
+    background-color: rgb(255, 32, 32);
     font-weight: bold;
     font-size: 16px;
     color: burlywood;
@@ -18,9 +28,8 @@ button {
 .circ-button {
     position: relative;
     text-align: center;
-    align-items: center;
     vertical-align: middle;
-    background-color: rgb(170, 155, 255, .2);
+    background-color: rgba(255, 155, 155, 0.2);
     width: 220px;
     height: 120px;
     font-family: 'Edu QLD Beginner', Verdana, Geneva, Tahoma, sans-serif;
@@ -43,6 +52,7 @@ button {
     0 2px 0 rgba(255,255,255,.4),
     inset 0 2px 0 rgba(0,0,0,.1);
   }
+
 #wrapper {
     display: flex;
     margin: 0px auto;
@@ -51,7 +61,8 @@ button {
     position: relative;
 
     flex-wrap: wrap;
-
-
-
+}
+#flip-page {
+    display: none;
+    text-align: center;
 }

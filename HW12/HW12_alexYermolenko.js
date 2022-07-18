@@ -1,17 +1,46 @@
-let container = document.querySelector('#wrapper')
-const buttonGetUsers = document.querySelector('.users')
-const buttonGetPlanets = document.querySelector('.planets')
-buttonGetUsers.addEventListener('click', getUsers)
-buttonGetPlanets.addEventListener('click', getPlanets)
-
 const BASE_END_POINT = "https://swapi.dev/api/";
+let page = 1;
+const FIRST_PAGE = 1;
+const LAST_PAGE = 6;
+let container = document.querySelector('#wrapper');
+const buttonGetUsers = document.querySelector('.users');
+const buttonGetPlanets = document.querySelector('.planets');
+const buttonPrev = document.querySelector('#prev');
+const buttonNext = document.querySelector('#next');
+buttonGetUsers.addEventListener('click', getUsers);
+buttonGetPlanets.addEventListener('click', getPlanets.bind(null, page));
+buttonNext.addEventListener("click", () => {
+    page++;
+    container.innerHTML = "";
+    getPlanets(page);
+    buttonPrev.style.display = 'initial';
+    buttonNext.style.display = 'initial';
+    if (page === LAST_PAGE) {
+        buttonPrev.style.display = 'initial';
+        buttonNext.style.display = 'none';
+    }
+})
+buttonPrev.addEventListener("click", () => {
+    page--;
+    container.innerHTML = "";
+    getPlanets(page);
+    buttonPrev.style.display = 'initial';
+    buttonNext.style.display = 'initial';
+    if (page === FIRST_PAGE) {
+        buttonPrev.style.display = 'none';
+        buttonNext.style.display = 'initial';
+    }
+
+})
 
 async function getUsers() {
     container.innerHTML = "";
+    const visibility = document.getElementById('flip-page');
+    visibility.style.display = 'none';
+
     const request = await fetch(`${BASE_END_POINT}films/2/`);
     const response = await request.json();
-    console.log({ response })
-
+    
     for (promise of response.characters) {
         const hero = await fetch(promise).then((res) => res.json());
         const heroName = hero.name;
@@ -25,11 +54,13 @@ async function getUsers() {
     }
 }
 
-async function getPlanets(page = 2) {
+async function getPlanets(page) {
     container.innerHTML = "";
-    const requestPlanets = await fetch(`${BASE_END_POINT}planets/?page=2`);
+    const visibility = document.getElementById('flip-page');
+    visibility.style.display = 'initial';
+    buttonPrev.style.display = 'none';
+    const requestPlanets = await fetch(`${BASE_END_POINT}planets/?page=${page}`);
     const responsePlanets = await requestPlanets.json();
-    console.log({ responsePlanets });
 
     responsePlanets.results.forEach(planet => {
         div = document.createElement('div');
