@@ -13,7 +13,6 @@
 const arrayOfIeroglifs = [];
 async function getRandomChinese(length) {
     const DELAY_INTREVAL = 50;
-
     let i = 0;
     while (i < length) {
         await new Promise ((res) => {
