@@ -10,9 +10,10 @@
 
 (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms */
 
+const arrayOfIeroglifs = [];
 async function getRandomChinese(length) {
     const DELAY_INTREVAL = 50;
-    arrayOfIeroglifs = [];
+
     let i = 0;
     while (i < length) {
         await new Promise ((res) => {
