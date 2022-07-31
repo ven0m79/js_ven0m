@@ -40,7 +40,7 @@ async function getUsers() {
 
     const request = await fetch(`${BASE_END_POINT}films/2/`);
     const response = await request.json();
-    
+
     for (promise of response.characters) {
         const hero = await fetch(promise).then((res) => res.json());
         const heroName = hero.name;
@@ -68,9 +68,6 @@ async function getPlanets(page) {
         div.textContent = `Name:${planet.name}`;
         container.append(div);
     })
-
-
-
 }
 
 
