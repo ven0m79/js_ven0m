@@ -5,7 +5,8 @@ const randomColor = function() {
 
 let container = document.querySelector('#root')
 function generateBlocks() {
-    const MAX_COUNT_QUAD = 25
+    container.innerHTML = "";
+    const MAX_COUNT_QUAD = 25;
 for (let i = 0; i < MAX_COUNT_QUAD; i++) {
     let div = document.createElement('div');
     div.classList.add('quad');
@@ -27,4 +28,4 @@ function init() {
     generateBlocks()
     generateBlocksInterval()
 }
-init()
+//init()
