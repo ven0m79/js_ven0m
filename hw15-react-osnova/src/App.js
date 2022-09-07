@@ -14,8 +14,10 @@ const post = {
 function App() {
   return (
     <div className="App">
-      <img src={ANAKIN_IMAGE} alt="Anakin" width = "100px"></img><p>{post.nickname}, {post.name}</p><br /><img src={RAY_IMAGE} alt="Ray" width = "600px"></img>
-      
+      <img src={ANAKIN_IMAGE} alt="Anakin" width="100px"></img><p>{post.nickname}, {post.name}</p>
+      <br />
+      <img src={RAY_IMAGE} alt="Ray" width="600px"></img>
+
     </div>
   );
 }

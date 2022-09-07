@@ -1,5 +1,3 @@
-let container = document.querySelector('#wrapper')
-
 const randomColor = function() {
     const MAX_RGB_VALUE = 256;
     return `rgb(${Math.floor(MAX_RGB_VALUE*Math.random())},${Math.floor(MAX_RGB_VALUE*Math.random())},${Math.floor(MAX_RGB_VALUE*Math.random())})`
