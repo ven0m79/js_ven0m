@@ -34,34 +34,36 @@ buttonPrev.addEventListener("click", () => {
 })
 
 async function getUsers() {
+    try {
+        buttonGetPlanets.setAttribute('disabled', true)
     container.innerHTML = "";
     const visibility = document.getElementById('flip-page');
     visibility.style.display = 'none';
-
     const request = await fetch(`${BASE_END_POINT}films/2/`);
     const response = await request.json();
-
     for (promise of response.characters) {
         const hero = await fetch(promise).then((res) => res.json());
         const heroName = hero.name;
         const heroAge = hero.birth_year;
         const heroGender = hero.gender;
-
         let div = document.createElement('div');
         div.classList.add('circ-button');
         div.textContent = `Name:${heroName}, Age:${heroAge}, Gender:${heroGender}`;
         container.append(div);
     }
 }
+finally {buttonGetPlanets.removeAttribute('disabled')}
+}
 
 async function getPlanets(page) {
+    try {
+        buttonGetUsers.setAttribute('disabled', true)
     container.innerHTML = "";
     const visibility = document.getElementById('flip-page');
     visibility.style.display = 'initial';
     buttonPrev.style.display = 'none';
     const requestPlanets = await fetch(`${BASE_END_POINT}planets/?page=${page}`);
     const responsePlanets = await requestPlanets.json();
-
     responsePlanets.results.forEach(planet => {
         div = document.createElement('div');
         div.classList.add('circ-button');
@@ -69,7 +71,5 @@ async function getPlanets(page) {
         container.append(div);
     })
 }
-
-
-
-
+finally {buttonGetUsers.removeAttribute('disabled')}
+}
