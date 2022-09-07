@@ -1,3 +1,4 @@
+const MAX_COUNT_QUAD = 25;
 const randomColor = function() {
     const MAX_RGB_VALUE = 256;
     return `rgb(${Math.floor(MAX_RGB_VALUE*Math.random())},${Math.floor(MAX_RGB_VALUE*Math.random())},${Math.floor(MAX_RGB_VALUE*Math.random())})`
@@ -6,7 +7,6 @@ const randomColor = function() {
 let container = document.querySelector('#root')
 function generateBlocks() {
     container.innerHTML = "";
-    const MAX_COUNT_QUAD = 25;
 for (let i = 0; i < MAX_COUNT_QUAD; i++) {
     let div = document.createElement('div');
     div.classList.add('quad');
