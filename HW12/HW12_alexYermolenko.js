@@ -1,12 +1,15 @@
-const BASE_END_POINT = "https://swapi.dev/api/";
-let page = 1;
-const FIRST_PAGE = 1;
-const LAST_PAGE = 6;
 let container = document.querySelector('#wrapper');
 const buttonGetUsers = document.querySelector('.users');
 const buttonGetPlanets = document.querySelector('.planets');
 const buttonPrev = document.querySelector('#prev');
 const buttonNext = document.querySelector('#next');
+
+const BASE_END_POINT = "https://swapi.dev/api/";
+const FIRST_PAGE = 1;
+const LAST_PAGE = 6;
+
+let page = 1;
+
 buttonGetUsers.addEventListener('click', getUsers);
 buttonGetPlanets.addEventListener('click', getPlanets.bind(null, page));
 buttonNext.addEventListener("click", () => {
@@ -30,7 +33,6 @@ buttonPrev.addEventListener("click", () => {
         buttonPrev.style.display = 'none';
         buttonNext.style.display = 'initial';
     }
-
 })
 
 async function getUsers() {
@@ -43,12 +45,10 @@ async function getUsers() {
         const response = await request.json();
         for (promise of response.characters) {
             const hero = await fetch(promise).then((res) => res.json());
-            const heroName = hero.name;
-            const heroAge = hero.birth_year;
-            const heroGender = hero.gender;
+            const {name, birth_year, gender} = hero;
             let div = document.createElement('div');
             div.classList.add('circ-button');
-            div.textContent = `Name:${heroName}, Age:${heroAge}, Gender:${heroGender}`;
+            div.textContent = `Name:${name}, Age:${birth_year}, Gender:${gender}`;
             container.append(div);
         }
     }
