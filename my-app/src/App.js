@@ -1,15 +1,12 @@
+//import logo from './logo.svg';
 import './App.css';
-
-import ShowButton from './components/show_button';
-
+import ShowButton from './components/showbutton';
 
 function App() {
   return (
     <div className="App">
-        <p>
-          Hello 
-          <ShowButton />
-        </p>
+      hell yeah!
+      <ShowButton/>
     </div>
   );
 }
