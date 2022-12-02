@@ -1,13 +1,17 @@
 import { Component } from "react";
+import { users } from "../service";
 
-class UserPage extends Component {
+export default class UserPage extends Component {
     render () {
+        const index = this.props.match.params.id;
+        const user = users[index]
         return (
             <div>
-                <strong>Home Page</strong>
+                <div className="user">
+                        <strong>{user.name}</strong>
+                        <p>Comments: {user.comments}</p>
+                    </div>
             </div>
         )
     }
 }
-
-export default UserPage;
