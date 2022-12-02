@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { users } from "../service";
+import Header from "./Header";
 
 export default class UserPage extends Component {
     render () {
@@ -7,6 +8,7 @@ export default class UserPage extends Component {
         const user = users[index]
         return (
             <div>
+                <Header/>
                 <div className="user">
                         <strong>{user.name}</strong>
                         <p>Comments: {user.comments}</p>

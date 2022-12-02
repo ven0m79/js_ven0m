@@ -7,7 +7,10 @@ export default class Header extends Component {
             <div className="header">
                 <h1>Logo</h1>
                 <Nav />
-                <button className="btn">Add user</button>
+                {
+                    this.props.url === '/Users' ? <button className="btn">Add user</button> : <div></div>
+                }
+                
             </div>
         )
     }
