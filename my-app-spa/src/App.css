@@ -1,0 +1,31 @@
+/*.App {*/
+/*  text-align: center;*/
+/*}*/
+.header {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: dodgerblue;
+}
+.nav li{
+  display: inline-block;
+  padding: 20px;
+}
+
+.btn {
+  padding: 10px;
+  height: 37px;
+  margin-top: 30px;
+}
+
+.user {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  -webkit-box-shadow: 1px 10px 10px -1px rgba(0,0,0,0.34);
+  -moz-box-shadow: 1px 10px 10px -1px rgba(0,0,0,0.34);
+  box-shadow: 1px 10px 10px -1px rgba(0,0,0,0.34);
+}

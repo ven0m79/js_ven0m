@@ -8,7 +8,7 @@ const Section = () => {
         <button onClick={() => {
             setCounter(counter + 1)
         }}>
-            Click from Sectioon
+            <div>Click from Section</div>
         </button>
     </div>
 };
