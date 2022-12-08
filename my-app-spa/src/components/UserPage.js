@@ -5,7 +5,8 @@ import Header from "./Header";
 export default class UserPage extends Component {
     render () {
         const index = this.props.match.params.id;
-        const user = users[index]
+        const user = users[index];
+        const baseUrl = this.props.location.pathname;
         return (
             <div>
                 <Header/>
