@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW10/HW10_alexYermolenko.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/HW10_alexYermolenko.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW10/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-styled/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-styled/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-styled/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-styled/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-styled/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/theme/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,19 +35,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="281z1kMjkpcxi0a34c7UN6zuWcG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/schur/Desktop/js_ven0m&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -72,6 +80,11 @@
       <workItem from="1654962807977" duration="78000" />
       <workItem from="1655905765087" duration="140000" />
       <workItem from="1656074182426" duration="25000" />
+      <workItem from="1670599147343" duration="6319000" />
+      <workItem from="1670610653233" duration="1304000" />
+      <workItem from="1670676060699" duration="945000" />
+      <workItem from="1670742908748" duration="2026000" />
+      <workItem from="1671012671806" duration="5401000" />
     </task>
     <servers />
   </component>
@@ -88,16 +101,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="684" y="230" key="RollbackChangesDialog" timestamp="1656074205038">
-      <screen x="0" y="0" width="1680" height="1020" />
-    </state>
-    <state x="684" y="230" key="RollbackChangesDialog/0.0.1680.1020@0.0.1680.1020" timestamp="1656074205038" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1654962878008">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816/1920.0.1920.1032@0.0.1536.816" timestamp="1654962878008" />
   </component>
 </project>

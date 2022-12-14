@@ -1,8 +1,10 @@
 export const theme = {
-    colors: {
-    main: "blue",
-    },
-    shadows: {
-        xl: "0 5px 30px rgba(0, 0, 0, 0.15)"
-    }
+    $colorPrimary: "#00ffff",
+    shadowsXl: "0 5px 10px rgba(0, 0, 0, 0.5)",
+    fontXl: 30,
+};
+export const darkTheme = {
+    $colorPrimary: "#ff0000",
+    shadowsXl: "0 5px 10px rgba(0, 0, 0, 0.5)",
+    fontXl: 30,
 }
