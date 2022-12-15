@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app-animations/src/components/accordion/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-animations/src/components/accordion/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-animations/src/theme/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-animations/src/theme/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-animations/src/theme/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-stitches/src/theme/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-stitches/src/theme/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app-stitches/src/theme/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app-styled/src/components/button/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/components/button/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-animations/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-animations/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +90,7 @@
       <workItem from="1670676060699" duration="945000" />
       <workItem from="1670742908748" duration="2026000" />
       <workItem from="1671012671806" duration="6328000" />
-      <workItem from="1671027146550" duration="9528000" />
+      <workItem from="1671027146550" duration="11185000" />
     </task>
     <servers />
   </component>
