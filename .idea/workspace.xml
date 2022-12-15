@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cc2b7fc-d260-4b28-a1a6-f3867e1623a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app-animations/src/components/accordion/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-animations/src/components/accordion/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-animations/src/theme/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-animations/src/theme/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-animations/src/theme/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-stitches/src/theme/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-stitches/src/theme/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app-stitches/src/theme/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app-styled/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app-styled/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app-styled/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app-styled/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app-styled/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/theme/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app-styled/src/components/button/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app-styled/src/components/button/style.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +43,30 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="281z1kMjkpcxi0a34c7UN6zuWcG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/schur/Desktop/js_ven0m&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/schur/Desktop/js_ven0m/my-app-animations/src",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\schur\Desktop\js_ven0m\my-app-animations\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -84,7 +97,8 @@
       <workItem from="1670610653233" duration="1304000" />
       <workItem from="1670676060699" duration="945000" />
       <workItem from="1670742908748" duration="2026000" />
-      <workItem from="1671012671806" duration="5401000" />
+      <workItem from="1671012671806" duration="6328000" />
+      <workItem from="1671027146550" duration="9528000" />
     </task>
     <servers />
   </component>
