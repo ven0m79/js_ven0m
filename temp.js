@@ -1,16 +1,12 @@
-function doSmth(e, index) {
-    e.stopPropagation();    console.log(`Hi from ${index}`);
-}
-function doElse() {
-    console.log('4d nah');
-}
+function findNextSquare(sq) {
+    const sqSq = Math.sqrt(sq);
+    const sqLogic = Number.isInteger(Math.sqrt(sq));
+    if (sqLogic) {
+        let value = Math.pow((sqSq + 1), 2)
+        return value;
+    }
+    // Return the next square if sq is a perfect square, -1 otherwise
+    return -1;
+  }
 
-const parent = document.querySelector('.parent');
-const child1 = document.querySelector('.child1');
-const child2 = document.querySelector('.child2');
-
-
-[parent, child1, child2].forEach((el, index) => 
-    el.addEventListener("click", (e) => doSmth(e, index))
-    );
-
+ console.log(findNextSquare(121)); 
